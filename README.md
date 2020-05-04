@@ -11,7 +11,8 @@
 1. Install mandatory packages for Docker
 2. Add Docker key to Apt
 3. Add Docker repo to Apt
-4. Add Docker Users to docker group
+4. Install Docker pacakages
+5. Add Docker Users to docker group
 
 ## Run the playbook:
 ansible-playbook -i hosts pbInstallDocker.yml
