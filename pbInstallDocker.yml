@@ -41,7 +41,7 @@
     - name: Add repo to apt
       become: true
       apt_repository:
-        repo: deb [arch=amd64] {{ item }} {{ hostvars[inventory_hostname].ansible_distribution_release }} stable
+        repo: {{ item }}
         state: present
       loop: "{{ repoUrl }}"
       when: repoUrl is defined

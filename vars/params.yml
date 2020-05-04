@@ -7,7 +7,7 @@ packageList:
 keyUrl:
   - https://download.docker.com/linux/ubuntu/gpg
 repoUrl:
-  - https://download.docker.com/linux/ubuntu
+  - deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ hostvars[inventory_hostname].ansible_distribution_release }} stable
 dockerVersion: 5:18.09.5~3-0~ubuntu
 dockerPackages:
   - docker-ce-cli={{ dockerVersion }}-{{ hostvars[inventory_hostname].ansible_distribution_release }}
