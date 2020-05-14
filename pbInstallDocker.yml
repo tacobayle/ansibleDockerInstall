@@ -41,7 +41,7 @@
     - name: Add repo to apt
       become: true
       apt_repository:
-        repo: {{ item }}
+        repo: "{{ item }}"
         state: present
       loop: "{{ repoUrl }}"
       when: repoUrl is defined
